@@ -31,7 +31,7 @@ The version in parentheses was used for testing.
       `file:///path/to/your/index.html`
 
 ## Modifying
-See also: [License](#License)
+See also: [License](#license)
 
 ### General notes
 It's good to know the basics of Apache Maven. The official tutorial is
