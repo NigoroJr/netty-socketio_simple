@@ -40,6 +40,9 @@ It's good to know the basics of Apache Maven. The official tutorial is
 The API for netty-socketio 1.6.1 can be found at:
 http://javadox.com/com.corundumstudio.socketio/netty-socketio/1.6.1/allclasses-noframe.html
 
+Also, netty-socketio has a good demo project at
+https://github.com/mrniko/netty-socketio-demo
+
 ### Some gotchas
 Here are some tips that might help.
 
