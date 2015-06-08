@@ -23,9 +23,18 @@ socket.on('connect', function () {
 var my_id = Math.floor(Math.random() * 100);
 
 function send_team() {
-  var jsonObject = {team: event.target.id, id: my_id};
+  var player = {
+    id: Math.floor(Math.random() * 100),
+    teamId: Math.floor(Math.random() * 10),
+    coord: {x: 42, y: 24}
+  };
+  var newCoord = {
+    x: Math.floor(Math.random() * 100),
+    y: Math.floor(Math.random() * 100),
+  };
+  var jsonObject = {player: player, newCoord: newCoord};
   socket.emit('income', jsonObject);
-  alert('Sent: ' + jsonObject.team + ' ' + jsonObject.id);
+  console.log("%o\n", jsonObject);
 }
 
 $("button").click(send_team);

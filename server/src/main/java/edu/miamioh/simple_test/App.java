@@ -10,13 +10,17 @@ public class App {
         config.setPort(3000);
 
         SocketIOServer server = new SocketIOServer(config);
-        server.addEventListener("income", MyObjToSend.class,
-                new DataListener<MyObjToSend>() {
+        server.addEventListener("income", MyObj.class,
+                new DataListener<MyObj>() {
             @Override
-            public void onData(SocketIOClient cli, MyObjToSend obj,
+            public void onData(SocketIOClient cli, MyObj obj,
                     AckRequest ack) {
-                System.out.println("Received data from " + obj.id
-                        + " in team " + obj.team);
+                System.out.printf("Player ID %d (of team %d) at (%d, %d)\n",
+                        obj.player.id,
+                        obj.player.teamId,
+                        obj.player.coord.x,
+                        obj.player.coord.y);
+                System.out.printf("=> (%d, %d)\n", obj.newCoord.x, obj.newCoord.y);
             }
         });
 
