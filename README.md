@@ -61,10 +61,9 @@ update the package names.
 You need to `mvn compile` before doing `mvn exec:java` if you update the
 source code.
 
-#### No constructors are allowed!!
-Do **NOT** implement constructors in the container classes. You can see that
-no data will be received in the server if you include the commented-out
-constructors in the Player and/or Coordinates class.
+#### Default constructors
+Make sure you have default constructors for all of your container classes (in
+this case, Player and Coordinates).
 
 ## Author
 Naoki Mizuno

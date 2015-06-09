@@ -12,11 +12,12 @@ public class Player {
     /* Current coordinate */
     public Coordinates coord;
 
-    /*
+    public Player() {
+    }
+
     public Player(int id, int teamId, Coordinates coord) {
         this.id = id;
         this.teamId = teamId;
         this.coord = coord;
     }
-    */
 }
